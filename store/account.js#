@@ -1,0 +1,18 @@
+import single from '@/store-helpers/single'
+
+const singleModule = single('/user/auth/identity', { expand: 'auths' })
+
+export const state = () => singleModule.state
+export const getters = singleModule.getters
+export const actions = {
+  ...singleModule.actions,
+  async get ({ state, dispatch, commit, getters }, filter = {}) {
+    const token = await this.$auth.getToken()
+    if (token) {
+      return singleModule.actions.get.call(this, { state, dispatch, commit, getters }, filter)
+    } else {
+      return null
+    }
+  }
+}
+export const mutations = singleModule.mutations

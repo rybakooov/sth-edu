@@ -1,0 +1,50 @@
+@mixin down($breakpoint) {
+  @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin down-height($breakpoint) {
+  @media screen and (max-height: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin up($breakpoint) {
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin background-image($src) {
+  background-image: $src;
+  .webp & {
+    background-image: "#{$src}&f=webp";
+  }
+  .avif & {
+    background-image: "#{$src}&f=avif";
+  }
+}
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(32, 1fr);
+  @include down (xxl) {
+    grid-template-columns: repeat(24, 1fr);
+  }
+  @include down (lg) {
+    grid-template-columns: repeat(16, 1fr);
+  }
+  @include down (md) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+@mixin hide-scrollbar {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
