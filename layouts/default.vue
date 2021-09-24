@@ -40,6 +40,8 @@
     </v-main>
     <v-footer
       app
+      fixed
+      :class="$style.footer"
     >
       <span>&copy; StartTheHistory {{ new Date().getFullYear() }}</span>
     </v-footer>
@@ -83,5 +85,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+  }
+
+  .footer {
+    z-index: 5;
   }
 </style>

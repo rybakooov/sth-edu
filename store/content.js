@@ -164,8 +164,7 @@ export const state = () => ({
   ]
 })
 export const getters = {
-  getLesson (state, id) {
-    console.log(id)
+  getLesson: state => id => {
     return state.list.find(el => el._id === id)
   }
 }
