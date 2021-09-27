@@ -4,14 +4,15 @@
       <v-card class="mb-4">
         <v-card-title :class="`text-h4 font-weight-medium ${$style.nobreak}`">{{ lesson.title }}</v-card-title>
       </v-card>
-      <v-row>
+      <template v-for="(row, index) in links" >
+        <v-row :key="row + '_row'">
         <v-col
-          v-for="card in lesson.items"
-          :key="card.title"
           cols="12"
           sm="6"
           md="4"
           xl="3"
+          :key="card.title"
+          v-for="card in row"
         >
           <v-card
             height="250"
@@ -30,6 +31,8 @@
           </v-card>
         </v-col>
       </v-row>
+        <span class="my-5 d-flex" v-if="index !== (links.length - 1)" :key="row + '_divider'" />
+      </template>
     </v-col>
   </v-layout>
 </template>
@@ -52,6 +55,18 @@
           this.$nuxt.error({ statusCode: 404 })
         }
         return lesson
+      },
+      links() {
+        const arr = []
+        // if (!this.lesson?.items) return
+        const items = [...this.lesson.items]
+        while(items.findIndex(el => el.type === 'divider') !== -1) {
+          const toPush = items.splice(0, items.findIndex(el => el.type === 'divider'))
+          arr.push(toPush)
+          items.splice(0, 1)
+        }
+        arr.push(items)
+        return arr
       },
       title() {
         return this.lesson.title

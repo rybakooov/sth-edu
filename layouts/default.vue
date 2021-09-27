@@ -71,6 +71,10 @@
             icon: 'mdi-bookshelf',
             title: 'Учебные материалы',
             to: '/lessons'
+          }, {
+            icon: 'mdi-checkbox-marked-circle-outline',
+            title: 'Тесты',
+            to: '/tests'
           }
         ],
         title: 'StartTheHistory'

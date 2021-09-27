@@ -59,7 +59,7 @@ export const state = () => ({
           link: 'https://disk.yandex.ru/i/5q9HTq_7Fst6ag'
         }, {
           title: 'Индикатор SQZMOM',
-          link: 'https://disk.yandex.ru/i/5q9HTq_7Fst6ag'
+          link: 'https://disk.yandex.ru/i/cjtkghEK4qB2TQ'
         }, {
           title: 'Индикатор TRIX',
           link: 'https://disk.yandex.ru/i/e6YWzq4IsXtIXg'
@@ -125,12 +125,12 @@ export const state = () => ({
         }, {
           type: 'divider'
         }, {
-          title: 'Стрим разбор ваших компаний',
+          title: 'Стрим "Разбор ваших компаний"',
           link: 'https://youtu.be/6AuKnEzVZ7k'
         }, {
           type: 'divider'
         }, {
-          title: 'Стрим собираем портфель',
+          title: 'Стрим "Собираем портфель"',
           link: 'https://youtu.be/LIi6ytIdKFs'
         }
       ]
