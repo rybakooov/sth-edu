@@ -29,6 +29,8 @@ jobs:
       # Собираем приложение
       - name: Build Appliction
         run: $BUILD_SCRIPT
+      - name: Log
+        run: ls
       # Доставляем собранное приложение на сервер
       - name: Deploy to Server
         uses: appleboy/scp-action@master
