@@ -38,6 +38,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
+          passphrase: ""
           port: ${{ secrets.PORT }}
           source: ${{ env.BUILD_SCRIPT_OUTPUT }}
           target: ${{ env.DEPLOY_PATH }}
