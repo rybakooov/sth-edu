@@ -33,12 +33,11 @@ jobs:
       - name: Deploy to Server
         uses: appleboy/scp-action@master
         with:
-          host: ${{ secrets.DEPLOY_SERVER_HOST }}
-          port: ${{ secrets.DEPLOY_SERVER_PORT }}
-          username: ${{ secrets.DEPLOY_SERVER_USERNAME }}
-          key: ${{ secrets.DEPLOY_SERVER_KEY }}
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
           source: ${{ env.BUILD_SCRIPT_OUTPUT }}
-          target: ${{ env.DEPLOY_PATH }}/${{ env.BRANCH_NAME }}
-          strip_components: 1
+          target: ${{ env.DEPLOY_PATH }}
       - name: Print Info
-        run: echo "Deployed at https://${BRANCH_NAME}.app.example.ru/"
+        run: echo "Deployed successfully!"
