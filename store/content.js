@@ -4,11 +4,13 @@ export const state = () => ({
       _id: 0,
       title: 'Письменная часть',
       link: 'https://disk.yandex.ru/d/TAUf89EzxBz0iQ'
-    }, {
+    },
+    {
       _id: 1,
       title: 'Видео-часть по письменной',
       link: 'https://disk.yandex.ru/d/Sds2qOMhOSJnGg'
-    }, {
+    },
+    {
       _id: 2,
       title: 'Стратегии',
       items: [
@@ -39,9 +41,25 @@ export const state = () => ({
         }, {
           title: 'Стратегия по торговле одной компанией',
           link: 'https://disk.yandex.ru/i/IOiC0AZMABRt8w'
+        }, {
+          title: 'Стратегия торговли по уровням PIVOT + EMA 200',
+          link: 'https://disk.yandex.ru/i/TnX7kLFeqKi5Jg'
+        }, {
+          title: 'Торговля на симуляторе',
+          link: 'https://disk.yandex.ru/i/bhYgFOFy3VQaSQ'
+        }, {
+          title: 'Онлайн торговля на связке по тренду',
+          link: 'https://disk.yandex.ru/i/abZOy8aGWvtbJg'
+        }, {
+          title: 'Торговля по тренду внутри дня',
+          link: 'https://disk.yandex.ru/i/miNAgqW56_E-_g'
+        }, {
+          title: 'Стратегия торговли на среднесрок',
+          link: 'https://disk.yandex.ru/i/IgFtahIkRUVmPA'
         }
       ]
-    }, {
+    },
+    {
       _id: 3,
       title: 'Индикаторы',
       items: [
@@ -78,9 +96,22 @@ export const state = () => ({
         }, {
           title: 'Индикатор фракталы Била Вильямса',
           link: 'https://disk.yandex.ru/i/SKcvDzOdlboMwA'
+        }, {
+          title: 'Топ 3 индикатора по торговле 1-3 месяца',
+          link: 'https://disk.yandex.ru/i/ZROFz66OmCS5og'
+        }, {
+          title: 'Волны Вульфа',
+          link: 'https://disk.yandex.ru/i/zmCB3Dq-Fthtbw'
+        }, {
+          title: 'Поглощение свечой',
+          link: 'https://disk.yandex.ru/i/wIgdT-plxuzySA'
+        }, {
+          title: 'Поддержка + сопротивление по каналам',
+          link: 'https://disk.yandex.ru/i/dOjXBSPQPUJc_w'
         }
       ]
-    }, {
+    },
+    {
       _id: 4,
       title: 'Всё и обо всём',
       items: [
@@ -98,7 +129,8 @@ export const state = () => ({
           link: 'https://disk.yandex.ru/i/k7M0KpfXRSUM8w'
         }
       ]
-    }, {
+    },
+    {
       _id: 5,
       title: 'Стримы',
       items: [
@@ -134,7 +166,8 @@ export const state = () => ({
           link: 'https://youtu.be/LIi6ytIdKFs'
         }
       ]
-    }, {
+    },
+    {
       _id: 6,
       title: 'Тесты',
       items: [
@@ -152,11 +185,13 @@ export const state = () => ({
           link: 'https://t.me/c/1580353214/131'
         }
       ]
-    }, {
+    },
+    {
       _id: 7,
       title: 'Таблица со связками',
       link: 'https://t.me/c/1580353214/122'
-    }, {
+    },
+    {
       _id: 8,
       title: 'Таблица с индикаторами',
       link: 'https://t.me/c/1580353214/124'
